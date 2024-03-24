@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }   
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+    }
+</style>
+<body>
+    <h1>hello world</h1>
+
+    <h2>select image</h2>
+    <!-- corrected id to match the event listener -->
+    <input type="file" id="imageInput" accept="image/*">
+
+    <br>
+
+    <img src="#" id="preview" alt="img">
+
+    <h2> result</h2>
+    <!-- added id for result display -->
+    <div id="result"></div>
+
+    <script>
+        const url = "https://huggingface.co/hilmantm/detr-traffic-accident-detection";
+        let token;
+
+        // added missing semicolon at the end of the statement
+        document.getElementById("preview").style.display = "none";
+
+        document.getElementById("imageInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.addEventListener("load", function() {
+                document.getElementById("preview").style.display = "block";
+                document.getElementById("preview").setAttribute("src", this.result);
+
+                const data = {
+                    inputs: {
+                        image: reader.result.split(",")[1]
+                    }
+                };
+
+                fetch('./config.json')
+                    .then(response => response.json())
+                    .then(config => {
+                        token = config.token;
+
+                        fetch(url, {
+                            method: "POST",
+                            headers: {
+                                Authorization: `Bearer ${token}`, // corrected template string
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify(data)
+                        })
+                        .then(response => response.blob()) // parsing response as blob
+                        .then(blob => {
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = 'output.png'; // setting filename
+                            document.body.appendChild(a);
+                            a.click(); // triggering click event on the anchor element
+                            window.URL.revokeObjectURL(url);
+                        })
+                        .catch(error => console.error('Error:', error));
+                    });
+            });
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>

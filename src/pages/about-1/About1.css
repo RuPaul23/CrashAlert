@@ -1,0 +1,209 @@
+.backgroundimage-icon1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.crashalert1 {
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+}
+.crash-alert-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) 0 0;
+}
+.home1 {
+  position: relative;
+  display: inline-block;
+  min-width: 67px;
+  cursor: pointer;
+  z-index: 1;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) var(--padding-10xl) 0 0;
+}
+.services1 {
+  position: relative;
+  display: inline-block;
+  min-width: 98px;
+  z-index: 1;
+}
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) var(--padding-20xl) 0 0;
+}
+.about3 {
+  position: relative;
+  display: inline-block;
+  min-width: 69px;
+  z-index: 1;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) 0 0;
+}
+.contact-box {
+  height: 51px;
+  width: 148px;
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-gainsboro);
+  display: none;
+}
+.contact3 {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+  min-width: 91px;
+  z-index: 1;
+}
+.contact2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2xs) var(--padding-9xl);
+  background-color: var(--color-gainsboro);
+  border-radius: var(--br-11xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.frame-container {
+  justify-content: flex-start;
+  gap: var(--gap-34xl);
+  font-size: var(--font-size-5xl);
+}
+.about-inner,
+.crash-alert-message-parent,
+.frame-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.crash-alert-message-parent {
+  width: 1687px;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.about-inner {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-8xl) 0 var(--padding-xl);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.outerbox {
+  height: 1030px;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  right: 0;
+  bottom: -52px;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-gainsboro);
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+.about-us1 {
+  position: relative;
+  z-index: 2;
+  margin-left: -290px;
+}
+.about2,
+.outer-box {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.outer-box {
+  align-self: stretch;
+  height: 978px;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: var(--padding-156xl) var(--padding-110xl) var(--padding-185xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.about2 {
+  width: 100%;
+  background-color: var(--color-black);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-37xl) 0 0;
+  gap: var(--gap-13xl);
+  letter-spacing: normal;
+}
+@media screen and (max-width: 975px) {
+  .frame-container {
+    display: none;
+  }
+  .crash-alert-message-parent {
+    width: 1078px;
+  }
+  .about-us1 {
+    font-size: var(--font-size-7xl);
+  }
+  .outer-box {
+    padding-top: var(--padding-95xl);
+    padding-bottom: var(--padding-114xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 700px) {
+  .frame-container {
+    gap: 53px 26px;
+  }
+  .outer-box {
+    padding: var(--padding-55xl) var(--padding-45xl) var(--padding-67xl);
+    box-sizing: border-box;
+  }
+  .about2 {
+    gap: 16px 32px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .about-us1 {
+    font-size: var(--font-size-lgi);
+  }
+  .outer-box {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

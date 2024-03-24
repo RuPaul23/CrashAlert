@@ -1,0 +1,124 @@
+.crashalert3 {
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+}
+.crashalert-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) 0 0;
+}
+.home3 {
+  position: relative;
+  display: inline-block;
+  min-width: 67px;
+  cursor: pointer;
+  z-index: 1;
+}
+.home-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) var(--padding-10xl) 0 0;
+}
+.services3 {
+  position: relative;
+  display: inline-block;
+  min-width: 98px;
+  z-index: 1;
+}
+.services-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) var(--padding-20xl) 0 0;
+}
+.about5 {
+  position: relative;
+  display: inline-block;
+  min-width: 69px;
+  cursor: pointer;
+  z-index: 1;
+}
+.about-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) 0 0;
+}
+.contact-box2 {
+  height: 51px;
+  width: 148px;
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-gainsboro);
+  display: none;
+}
+.contact8 {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+  min-width: 91px;
+  z-index: 1;
+}
+.contact7,
+.frame-nav,
+.frame-parent1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.contact7 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2xs) var(--padding-9xl);
+  background-color: var(--color-gainsboro);
+  border-radius: var(--br-11xl);
+  justify-content: flex-start;
+  z-index: 1;
+}
+.frame-nav,
+.frame-parent1 {
+  max-width: 100%;
+  text-align: left;
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.frame-nav {
+  margin: 0;
+  justify-content: flex-start;
+  gap: var(--gap-34xl);
+  font-size: var(--font-size-5xl);
+}
+.frame-parent1 {
+  align-self: stretch;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  font-size: var(--font-size-13xl);
+}
+@media screen and (max-width: 950px) {
+  .crashalert3 {
+    font-size: var(--font-size-7xl);
+  }
+  .frame-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .frame-nav {
+    gap: 53px 26px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .crashalert3 {
+    font-size: var(--font-size-lgi);
+  }
+}
